@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function AddUser() {
+  // form state
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -20,7 +21,7 @@ function AddUser() {
     if (name.length && email.length && phone.length) {
       console.log("valid");
 
-      //   loading on submit
+      //   state on submit
       setSubmitState("success");
       setTimeout(() => {
         setSubmitState("default");
@@ -48,7 +49,6 @@ function AddUser() {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-
       {/* errors */}
       {/* required */}
       {!name && clicked && (
@@ -58,6 +58,7 @@ function AddUser() {
       {name && name.length > 25 && clicked && (
         <p className="text-red-500 text-xs italic">Name is too long</p>
       )}
+
       {/* email */}
       <input
         className="px-4 py-2 text-lg border border-gray-300 rounded-sm focus:outline-none focus:border-gray-400 transition-all duration-300 ease-in-out"
@@ -76,6 +77,7 @@ function AddUser() {
       {email && !/^\S+@\S+\.\S+$/.test(email) && clicked && (
         <p className="text-red-500 text-xs italic">Email is not valid</p>
       )}
+
       {/* phone */}
       <input
         className="px-4 py-2 text-lg border border-gray-300 rounded-sm focus:outline-none focus:border-gray-400 transition-all duration-300 ease-in-out"
@@ -102,7 +104,7 @@ function AddUser() {
           handleSubmit();
         }}
         className={`px-4 py-2 text-lg border border-gray-300 rounded-sm hover:bg-gray-100 active:border-gray-400 focus:border-gray-500 transition-all duration-300 ease-in-out ${
-          // color change when success
+          // color change when success or fail
           submitState === "default"
             ? ""
             : submitState === "success"

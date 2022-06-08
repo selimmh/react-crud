@@ -9,7 +9,7 @@ function Popup({ children }) {
       {/* backdrop */}
       <div
         onClick={() => setOpen(false)}
-        className={`fixed inset-0 bg-black bg-opacity-50 transition-all`}
+        className={`fixed inset-0 bg-black bg-opacity-40 transition-all`}
       ></div>
       {/* content */}
       <div className="flex flex-col items-center justify-center w-full h-full">
