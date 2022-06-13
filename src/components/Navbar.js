@@ -7,7 +7,7 @@ function Navbar() {
 
   return (
     <div>
-      <ul className="flex w-full text-xl bg-transparent border select-none">
+      <ul className="absolute top-0 flex w-full text-xl border select-none z-50 bg-gray-100">
         <li
           className={`py-6 cursor-pointer flex justify-center basis-1/4 transition-all duration-300 ease-in-out active:bg-gray-300 hover:bg-gray-200 ${
             location.pathname === "/" && `bg-gray-200`

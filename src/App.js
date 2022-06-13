@@ -1,10 +1,14 @@
+import React, { useContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home, Page1, Page2, Page3 } from "./pages";
-import { Navbar } from "./components";
+import { Navbar, Notification } from "./components";
+
+import { Context } from "./context";
 
 function App() {
+  const { notification } = useContext(Context);
   return (
-    <div className="flex flex-col h-screen w-screen text-[2rem] bg-gray-100">
+    <div className="h-screen w-screen text-[2rem] bg-gray-100">
       <Router>
         <Navbar />
         <Routes>
@@ -14,6 +18,9 @@ function App() {
           <Route path="/page3" element={<Page3 />} />
         </Routes>
       </Router>
+      {notification && (
+        <Notification type={notification.type} message={notification.message} />
+      )}
     </div>
   );
 }
