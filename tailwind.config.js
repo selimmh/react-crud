@@ -26,6 +26,7 @@ module.exports = {
       animation: {
         "fade-in": "fade-in 0.3s ease-out",
         "swipe-up": "swipe-up 0.3s ease-in-out",
+        "spin-slow": "spin 10s linear infinite",
       },
     },
   },

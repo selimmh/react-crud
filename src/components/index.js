@@ -1,7 +1,6 @@
-export { default as Navbar } from "./Navbar";
-export { default as Popup } from "./Popup";
-export { default as DeleteUserModal } from "./Modals/DeleteUserModal";
-export { default as AddUserModal } from "./Modals/AddUserModal";
-export { default as UpdateUserModal } from "./Modals/UpdateUserModal";
-export { default as Notification } from "./Notification";
-export { default as Switch } from "./Utils/Switch";
+export { default as Sidebar } from "./Sidebar";
+export { default as Modal } from "./Modal";
+export { default as DeleteUser } from "./DeleteUser";
+export { default as UserForm } from "./UserForm";
+export { default as Alert } from "./Alert";
+export { default as Switch } from "./utils/Switch";

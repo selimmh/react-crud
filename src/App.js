@@ -1,26 +1,37 @@
 import React, { useContext } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home, Page1, Page2, Page3 } from "./pages";
-import { Navbar, Notification } from "./components";
+import {
+  Home,
+  Users,
+  Messages,
+  Branches,
+  Info,
+  Components,
+  Settings,
+  Error,
+} from "./pages";
+import { Sidebar, Alert } from "./components";
 
 import { Context } from "./context";
 
 function App() {
-  const { notification } = useContext(Context);
+  const { alert } = useContext(Context);
   return (
-    <div className="h-screen w-screen text-[2rem] bg-gray-100">
+    <div className="h-screen w-screen bg-gray-100 text-gray-600 overflow-hidden">
       <Router>
-        <Navbar />
+        <Sidebar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/page1" element={<Page1 />} />
-          <Route path="/page2" element={<Page2 />} />
-          <Route path="/page3" element={<Page3 />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/messages" element={<Messages />} />
+          <Route path="/branches" element={<Branches />} />
+          <Route path="/info" element={<Info />} />
+          <Route path="/components" element={<Components />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </Router>
-      {notification && (
-        <Notification type={notification.type} message={notification.message} />
-      )}
+      {alert && <Alert type={alert.type} message={alert.message} />}
     </div>
   );
 }

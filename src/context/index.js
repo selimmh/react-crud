@@ -2,13 +2,21 @@ import { createContext, useState } from "react";
 export const Context = createContext();
 
 const StateProvider = (props) => {
+  // modal state
   const [open, setOpen] = useState(false);
 
-  const [notification, setNotification] = useState("");
+  // alert state
+  const [alert, setAlert] = useState("");
 
-  if (notification) {
+  // user to update
+  const [userToUpdate, setUserToUpdate] = useState(null);
+
+  // user to delete
+  const [userToDelete, setUserToDelete] = useState(null);
+
+  if (alert) {
     setTimeout(() => {
-      setNotification(null);
+      setAlert(null);
     }, 3000);
   }
 
@@ -17,8 +25,15 @@ const StateProvider = (props) => {
       value={{
         open,
         setOpen,
-        notification,
-        setNotification,
+
+        alert,
+        setAlert,
+
+        userToUpdate,
+        setUserToUpdate,
+
+        userToDelete,
+        setUserToDelete,
       }}
     >
       {props.children}

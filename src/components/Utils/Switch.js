@@ -17,8 +17,8 @@ function Switch({ type, checked, onChange, name, id, label }) {
         onClick={() => {
           setIsToggled(!isToggled);
         }}
-        className={`cursor-pointer transition-all ease-in-out duration-500 w-16 h-8 rounded-full shadow-inner flex border items-center justify-between py-2 px-1 ${
-          isToggled ? "bg-green-400" : "bg-gray-200"
+        className={`cursor-pointer transition-all ease-in-out duration-500 w-16 h-8 rounded-full shadow flex border items-center justify-between py-2 px-1 ${
+          isToggled ? "bg-indigo-400" : "bg-indigo-50"
         }`}
       >
         {/* toggles */}

@@ -1,11 +1,11 @@
 import React from "react";
 
-function Home() {
+function Messages() {
   return (
     <div className="flex w-full h-full items-center justify-center text-xl">
-      Home
+      Messages
     </div>
   );
 }
 
-export default Home;
+export default Messages;

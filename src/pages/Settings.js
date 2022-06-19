@@ -1,11 +1,11 @@
 import React from "react";
 
-function Home() {
+function Settings() {
   return (
     <div className="flex w-full h-full items-center justify-center text-xl">
-      Home
+      Settings
     </div>
   );
 }
 
-export default Home;
+export default Settings;
