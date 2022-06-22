@@ -6,7 +6,7 @@ function Modal({ children }) {
   const { setOpen, setUserToUpdate, setUserToDelete, setAlert } =
     useContext(Context);
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center opacity-100 animate-fade-in">
+    <div className="fixed inset-0 flex flex-col items-center justify-center opacity-100 animate-fade-in z-20">
       {/* backdrop */}
       <div
         onClick={() => {
@@ -22,7 +22,7 @@ function Modal({ children }) {
       />
       {/* content */}
       <div className="flex flex-col items-center justify-center w-full h-full">
-        <div className="bg-white rounded-lg shadow-xl p-4 z-50 relative ">
+        <div className="bg-white rounded-lg shadow-xl p-4 relative w-96">
           <button
             onClick={() => {
               setOpen(false);

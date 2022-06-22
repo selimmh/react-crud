@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router";
 
 // icons
@@ -69,7 +69,7 @@ function Sidebar() {
 
   return (
     // container
-    <div className="absolute top-0 left-0 bottom-0 bg-white border-r z-0 w-20 group hover:w-80 transition-all duration-300 ease-in-out">
+    <div className="absolute top-0 left-0 bottom-0 bg-white border-r z-10 w-20 group hover:w-80 transition-all duration-300 ease-in-out">
       {/* arrow */}
       <div className="absolute h-full  flex items-center justify-center right-0 translate-x-[50%]">
         <AiOutlineArrowLeft className="rounded-full bg-white w-12 h-12 p-2 group-hover:rotate-180 transition-all duration-300 ease-in-out border-r" />

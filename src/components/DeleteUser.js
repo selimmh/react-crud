@@ -4,7 +4,7 @@ function DeleteUser({ title, body, onCancel, onConfirm }) {
   return (
     <div className="flex flex-col py-4 px-4">
       <h1 className="text-lg text-center">{title}</h1>
-      <p className="text-gray-500 text-xs italic mt-4">{body}</p>
+      <p className="text-gray-500 text-xs italic mt-4 text-center">{body}</p>
       <div className="flex w-full justify-around mt-8">
         <button
           onClick={onCancel}

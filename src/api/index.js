@@ -51,3 +51,15 @@ export const deleteUser = async (id) => {
     console.error(error);
   }
 };
+
+// sort function
+export const sortFunction = async (section, field, order) => {
+  try {
+    const response = await axios.get(
+      baseUrl + section + "?_sort=" + field + "&_order=" + order
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
